@@ -18,30 +18,34 @@ class _DetailDashboardState extends State<DetailDashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const ScreenHeaderText(
-            text: 'Hey,  Umar',
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          TargetBox(),
-          const SizedBox(
-            height: 15,
-          ),
-          TakeBox(),
-          const SizedBox(
-            height: 25,
-          ),
-          const WaterReminderRow(),
-          const SizedBox(
-            height: 10,
-          ),
-          StatsBox(),
-        ],
-      )).marginOnly(left: 15, right: 15, top: 40),
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const ScreenHeaderText(
+                text: 'Hey,  Umar',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TargetBox(),
+              const SizedBox(
+                height: 15,
+              ),
+              TakeBox(),
+              const SizedBox(
+                height: 25,
+              ),
+              const WaterReminderRow(),
+              const SizedBox(
+                height: 10,
+              ),
+              StatsBox(),
+              SizedBox(
+                height: 200,
+              )
+            ],
+          )).marginOnly(left: 15, right: 15, top: 40),
     );
   }
 
